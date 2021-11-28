@@ -1,7 +1,8 @@
-import React, { useState } from "react";
+import { useState, useEffect } from "react";
 import { Navigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { useAuth } from "../../hooks/useAuth";
+import { fetchMessages } from "../../slices/messages";
 import { createUser } from "../../slices/user";
 import "./Join.css";
 
@@ -16,10 +17,14 @@ const Join = () => {
     if (name.length < 3) {
       setErrorMessage("Name too short");
     }
-    if (name.length > 3) {
+    if (name.length >= 3) {
       dispatch(createUser(name));
     }
   };
+
+  useEffect(() => {
+    dispatch(fetchMessages());
+  }, []);
 
   if (user) {
     return <Navigate to="/chat" replace={true} />;

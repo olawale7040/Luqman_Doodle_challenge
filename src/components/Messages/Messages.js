@@ -1,13 +1,17 @@
 import React from "react";
-
 import ScrollToBottom from "react-scroll-to-bottom";
-
+import { useAuth } from "../../hooks/useAuth";
+import Message from "../Message/Message";
 import "./Messages.css";
 
-const Messages = () => (
-  <ScrollToBottom className="messages">
-    {/* {messages.map((message, i) => <div key={i}><Message message={message} name={name}/></div>)} */}
-  </ScrollToBottom>
-);
-
+const Messages = ({ messages }) => {
+  const { user } = useAuth();
+  return (
+    <ScrollToBottom className="messages">
+      {messages.map((message, i) => (
+        <Message key={i} message={message} user={user} />
+      ))}
+    </ScrollToBottom>
+  );
+};
 export default Messages;

@@ -52,3 +52,21 @@ $ npm run serve
 4. I would implement typing of emoji
 5. I would work more on the user interface
 6. With [Socket.io](https://socket.io/) I would notify the group when new user join or leave a group
+
+## Folder Structure
+
+```
+
+├── public
+├── src
+│   ├── assets
+│   ├── components
+│   ├── hooks
+│   ├── routes
+│   ├── slices
+│   ├── store
+│   ├── utils
+│   └── views
+│
+
+```

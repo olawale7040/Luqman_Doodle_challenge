@@ -40,7 +40,6 @@ export const createMessage = (data) => async (dispatch) => {
     if (response.status === 200) {
     }
   } catch (err) {
-    console.log(err, "err");
     return err.message;
   }
 };

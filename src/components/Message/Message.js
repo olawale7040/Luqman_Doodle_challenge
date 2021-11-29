@@ -1,5 +1,5 @@
+import { standardDateFormat } from "src/utils/date";
 import "./Message.css";
-import { standardDateFormat } from "../../utils/date";
 
 const Message = ({ message, user }) => {
   return (

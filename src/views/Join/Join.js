@@ -1,9 +1,9 @@
 import { useState, useEffect } from "react";
 import { Navigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
-import { useAuth } from "../../hooks/useAuth";
-import { fetchMessages } from "../../slices/messages";
-import { createUser } from "../../slices/user";
+import { useAuth } from "src/hooks/useAuth";
+import { fetchMessages } from "src/slices/messages";
+import { createUser } from "src/slices/user";
 import "./Join.css";
 
 const Join = () => {
@@ -14,17 +14,22 @@ const Join = () => {
 
   const handleLogin = (event) => {
     event.preventDefault();
-    if (name.length < 3) {
+    if (name === "") {
+      setErrorMessage("Name is required");
+    }
+    if (name && name.length < 3) {
       setErrorMessage("Name too short");
     }
     if (name.length >= 3) {
       dispatch(createUser(name));
+      let userObj = { name };
+      localStorage.setItem("chat_app", JSON.stringify(userObj));
     }
   };
 
   useEffect(() => {
     dispatch(fetchMessages());
-  }, []);
+  }, [dispatch]);
 
   if (user) {
     return <Navigate to="/chat" replace={true} />;
@@ -41,6 +46,7 @@ const Join = () => {
             className="joinInput"
             type="text"
             onChange={(event) => setName(event.target.value)}
+            onInput={() => setErrorMessage("")}
           />
         </div>
         <button onClick={handleLogin} className={"button mt-20"} type="submit">

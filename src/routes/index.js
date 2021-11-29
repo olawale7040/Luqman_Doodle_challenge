@@ -1,5 +1,5 @@
-import Join from "../views/Join/Join";
-import Chat from "../views/Chat/Chat";
+import Join from "src/views/Join/Join";
+import Chat from "src/views/Chat/Chat";
 
 const routes = [
   {

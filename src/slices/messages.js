@@ -1,6 +1,8 @@
 import { createSlice } from "@reduxjs/toolkit";
-import axios from "../utils/axios";
-const myToken = "6sQgBPf4EnBJ";
+import axios from "src/utils/axios";
+const myEndpointToken = process.env.REACT_APP_MY_TOKEN
+  ? process.env.REACT_APP_MY_TOKEN
+  : "6sQgBPf4EnBJ";
 
 const initialState = {
   messages: [],
@@ -25,9 +27,8 @@ export const reducer = slice.reducer;
 // Get All Messages
 export const fetchMessages = () => async (dispatch) => {
   try {
-    const response = await axios.get(`?token=${myToken}`);
-    console.log(response.data);
-    if (response.status == 200) {
+    const response = await axios.get(`?token=${myEndpointToken}`);
+    if (response.status === 200) {
       dispatch(slice.actions.fetchMessages(response.data));
     }
   } catch (err) {
@@ -39,7 +40,9 @@ export const fetchMessages = () => async (dispatch) => {
 export const createMessage = (data) => async (dispatch) => {
   try {
     dispatch(slice.actions.createMessage(data));
-    const response = await axios.post(`?token=${myToken}`, data);
+    const response = await axios.post(`?token=${myEndpointToken}`, data);
+    if (response.status === 200) {
+    }
   } catch (err) {
     return err.message;
   }

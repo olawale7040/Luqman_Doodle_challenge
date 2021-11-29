@@ -1,70 +1,54 @@
-# Getting Started with Create React App
+# Luqman_Doodle_challenge
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Simple Chat App
 
-## Available Scripts
+## Tech/framework used
 
-In the project directory, you can run:
+- [React](https://reactjs.org/)
 
-### `npm start`
+- [JavaScript](https://www.javascript.com/)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- [Redux Toolkit](https://redux-toolkit.js.org/)
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Featured performance objectives
 
-### `npm test`
+- Reusable code and structures
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Performant code
 
-### `npm run build`
+- Optimized user experience
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- Responsive user interface
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Quick Start
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+The guildlines below contains the instructions/commands to get started.
 
-### `npm run eject`
+#### Development app
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+To run the app locally on your computer
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+1. Open the root directory of the project on your terminal
+2. Run `npm install` to install all the app dependencies
+3. Run `npm run serve` (This will start the local server on port `http://localhost:3000`)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+```
+$ npm install
+$ npm run serve
+```
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+#### Motivation For Technology Choices
 
-## Learn More
+1. One of the top considerations when choosing a programming framework is performance. React is very fast when it comes to rendering with virtual DOM.
+2. React provides a component based structure, the reusable components make react a great framework
+3. React is easy to test
+4. Unidirectional data flow.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+#### What would be done differently when given more time
 
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+1. I would make the app realtime with [Socket.io](https://socket.io/)
+2. I would improve the user experience by using nice icon to indicate sent messages and messages yet to be sent
+3. User would be able to join different groups.
+4. I would implement typing of emoji
+5. I would work more on the user interface
+6. With [Socket.io](https://socket.io/) I would notify the group when new user join or leave a group

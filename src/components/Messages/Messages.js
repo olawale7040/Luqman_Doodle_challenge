@@ -1,6 +1,6 @@
 import React from "react";
 import ScrollToBottom from "react-scroll-to-bottom";
-import { useAuth } from "../../hooks/useAuth";
+import { useAuth } from "src/hooks/useAuth";
 import Message from "../Message/Message";
 import "./Messages.css";
 

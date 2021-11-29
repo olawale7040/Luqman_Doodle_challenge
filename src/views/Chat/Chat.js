@@ -1,14 +1,15 @@
 import { useState } from "react";
 import { Navigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import { createMessage } from "../../slices/messages";
-import { useAuth } from "../../hooks/useAuth";
-import InfoBar from "../../components/InfoBar/InfoBar";
-import InputComponent from "../../components/InputComponent/InputComponent";
-import Messages from "../../components/Messages/Messages";
+import { createMessage } from "src/slices/messages";
+import { useAuth } from "src/hooks/useAuth";
+// Components
+import InfoBar from "src/components/InfoBar/InfoBar";
+import InputComponent from "src/components/InputComponent/InputComponent";
+import Messages from "src/components/Messages/Messages";
 
 import "./Chat.css";
-import bgImage from "../../assets/body-bg.png";
+import bgImage from "src/assets/body-bg.png";
 
 const Chat = () => {
   const { user } = useAuth();

@@ -1,5 +1,3 @@
-import React from "react";
-
 import "./InputComponent.css";
 
 const Input = ({ setMessage, sendMessage, message }) => (

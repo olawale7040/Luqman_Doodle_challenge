@@ -2,7 +2,7 @@
 
 Simple Chat App
 
-## Tech/framework used
+## Tech/Framework used
 
 - [React](https://reactjs.org/)
 

@@ -21,8 +21,9 @@ const Join = () => {
       setErrorMessage("Name too short");
     }
     if (name.length >= 3) {
-      dispatch(createUser(name));
-      let userObj = { name };
+      const userName = name.trim();
+      dispatch(createUser(userName));
+      let userObj = { userName };
       localStorage.setItem("chat_app", JSON.stringify(userObj));
     }
   };

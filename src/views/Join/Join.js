@@ -23,7 +23,7 @@ const Join = () => {
     if (name.length >= 3) {
       const userName = name.trim();
       dispatch(createUser(userName));
-      let userObj = { userName };
+      let userObj = { name: userName };
       localStorage.setItem("chat_app", JSON.stringify(userObj));
     }
   };

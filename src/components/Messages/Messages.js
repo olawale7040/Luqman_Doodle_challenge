@@ -7,11 +7,13 @@ import "./Messages.css";
 const Messages = ({ messages }) => {
   const { user } = useAuth();
   return (
-    <ScrollToBottom className="messages">
-      {messages.map((message, i) => (
-        <Message key={i} message={message} user={user} />
-      ))}
-    </ScrollToBottom>
+    <div className="messagesContainer">
+      <ScrollToBottom className="messages">
+        {messages.map((message, i) => (
+          <Message key={i} message={message} user={user} />
+        ))}
+      </ScrollToBottom>
+    </div>
   );
 };
 export default Messages;

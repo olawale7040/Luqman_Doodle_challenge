@@ -1,13 +1,18 @@
 .infoBar {
   display: flex;
   align-items: center;
-  justify-content: space-between;
   background: #3898d4;
+  justify-content: center;
   border-radius: 4px 4px 0 0;
   height: 60px;
   width: 100%;
 }
-
+.infoBarContainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 640px;
+}
 .leftInnerContainer {
   flex: 0.5;
   display: flex;
@@ -25,4 +30,12 @@
 
 .onlineIcon {
   margin-right: 5%;
+}
+.logOut {
+  cursor: pointer;
+}
+@media (max-width: 768px) {
+  .infoBarContainer {
+    width: 100%;
+  }
 }
